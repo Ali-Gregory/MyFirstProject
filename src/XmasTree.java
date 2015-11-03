@@ -1,16 +1,14 @@
 import static java.lang.System.out;
-import java.util.Scanner;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 public class XmasTree {
 	
 	public static void main(String args[]){
-		Scanner keyboard = new Scanner (System.in);
 		char twig = '^';
-		out.println("Input number of lines:");
-		int numLines = keyboard.nextInt();
+		int numLines = Integer.parseInt
+				(JOptionPane.showInputDialog("Input number of lines:"));
 		out.println("Here is your tree:");
-		out.println();
 		
 		//Loop for the selected number of lines, adding 2 twigs on each
 		for (int i = 1, numTwigs = 1; i<=numLines; i++,numTwigs+=2 ){
