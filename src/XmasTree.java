@@ -3,13 +3,13 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class XmasTree {
+	char twig = '^';
+	
 	
 	//This branched code contains this comment to check that I can undo changes
 	
-	public static void main(String args[]){
-		char twig = '^';
-		int numLines = Integer.parseInt
-				(JOptionPane.showInputDialog("Input number of lines:"));
+	public void printTree(int numLines){
+//		String lines[] = {};
 		out.println("Here is your tree:");
 		
 		//Loop for the selected number of lines, adding 2 twigs on each
@@ -25,9 +25,11 @@ public class XmasTree {
 			//Loops to write beginning of line spaces
 			for (int j=1;j<=numOfSpaces;j++) {
 				if ((j==randomSnow || j==randomSnow2)  && j!=numOfSpaces) {
+//					lines[i-1] = lines[i-1].concat(".");
 					out.print(".");
 				}
 				else {
+//					lines[i-1] = lines[i-1].concat("_");
 					out.print(" ");
 				}
 			}
@@ -49,4 +51,6 @@ public class XmasTree {
 			
 		}
 	}
+	
+	
 }
